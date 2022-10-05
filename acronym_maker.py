@@ -8,6 +8,6 @@ if "of" in Term:
         acro_list = cap.replace("Of", "").split()
     else:
         acro_list = cap.split()
-for items in acro_list:
-    acronym = acronym + items[0] + "."
-print(f"the acronym of {Term} is {acronym}")
+    for items in acro_list:
+        acronym = acronym + items[0] + "."
+    print(f"the acronym of {Term} is {acronym}")
