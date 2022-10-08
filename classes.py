@@ -1,15 +1,29 @@
 class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+    number_of_students = 0
+    graduation = 1
+    def __init__(student, name, age, grade):
+        student.name = name
+        student.age = age
+        student.grade = grade
+        Person.number_of_students += 1
 
-    def email(self):
-        return (f"{self.name}@gmail.com")
+    def graduation_class(student):
+        student.grade = int(student.grade + student.graduation)
+
+    def email(student):
+        return f"{student.name}@gmail.com"
+
+    def __str__(student):
+        return f"{student.name} {student.age} {student.grade} {student.email()}"
 
 
-p1 = Person("John", 36)
+p1 = Person("John", 36, 5)
 
-print(p1.email())
+print(Person.number_of_students)
+p1.graduation_class()
+print(p1.grade)
+print(p1.__dict__)
+
 
 
 # class Person:
